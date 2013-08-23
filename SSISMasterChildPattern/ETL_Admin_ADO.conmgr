@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ETL_Admin_ADO"
+  DTS:DTSID="{7E6D8A8D-6286-402A-AA5A-79AA9567C0AF}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Project::AdminServer]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=.\SQL2012;Initial Catalog=ETL_Admin;Integrated Security=True;Application Name=SSIS-SSISMasterChildPattern-{7E6D8A8D-6286-402A-AA5A-79AA9567C0AF}.\SQL2012.ETL_Admin;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
