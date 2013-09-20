@@ -95,7 +95,7 @@ as
 	and		LoadEnabled = 1
 	order by [LoadOrder]
 
-	select	RunId = @RunId, PackageId = Id
+	select	RunId = @RunId, PackageId = Id, PackageName = Package
 	from	dbo.Package 
 	where	[Application] = @Application 
 	and		[System]  = @System
@@ -155,7 +155,7 @@ as
 go
 --populate
 insert dbo.Package ([Application], [System], Destination, Package, LoadOrder, LoadEnabled)
-values('Demo', 'Northwind', 'Staging', 'Child_Extract_1.dtsx', 1, 1)
+values('Demo', 'Northwind', 'Staging', 'Employees_Extract.dtsx', 1, 1)
 
 insert dbo.Package ([Application], [System], Destination, Package, LoadOrder, LoadEnabled)
-values('Demo', 'Northwind', 'Staging', 'Child_Extract_2.dtsx', 2, 1)
+values('Demo', 'Northwind', 'Staging', 'Orders_Extract.dtsx', 2, 1)

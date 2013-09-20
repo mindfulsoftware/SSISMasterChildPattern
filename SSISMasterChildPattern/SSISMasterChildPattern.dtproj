@@ -26,13 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">PDNPBRLB97</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHHT/WLG4UEG0dbWldbwvswAAAAACAAAAAAADZgAAwAAAABAAAADORNbx5y7g0hZIBs1kWsarAAAAAASAAACgAAAAEAAAAD179WCestcBFMAptDBlImCIAAAAOIpQv1vz+beKV6v2WeQ2GMm3+RioDtpxPnMEUgR/5zUVM0q4SzHWIGbIQSRgJtYnYL3bQu3PCYABJOECO6Jt4zelCYLqbjexjSPtgqaJbWKzjDGGSu4S/FlHdEPSNmbq+zyZyyqM7OKJmWRc24OIAQ3MhnoqbdG5cljqViGmfrpLT1YnkVoAVhQAAAAZX/bMfibNAwlB9shwffL+Sg1Wow==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHHT/WLG4UEG0dbWldbwvswAAAAACAAAAAAADZgAAwAAAABAAAAAsMRQFifdjZ+49UsPrRRWkAAAAAASAAACgAAAAEAAAACJBYSt8AgRgfkDYnmSLF1yIAAAAij4YOAAi1ef1tpg1fp2kYCYGmU8nj1aCmlvlTwj48yOiBwCERFGyMDtZesCPWtYPI0fxM1vU6Tr1S1q9q7DLMegRWkhVgkSQ/yyObMbq5jhA/JKlMtB/BCmimOKL5arPgdvWQr0PTUz73YY0742KcM5WcKM8G/jDjGGMuNLsGVIP5QHLL8+9mxQAAAA0L2u8Urb77f5Y7ajN8FPuhqI6Gw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="Master.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Child_Extract_1.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Child_Extract_2.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Employees_Extract.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Orders_Extract.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="ETL_Admin_ADO.conmgr" />
@@ -312,10 +312,10 @@
                 <SSIS:Property SSIS:Name="Name">Master</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">42</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">49</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{6503642D-B3E9-4E10-9E1E-1E775E983D82}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{7FE7C0B9-3DC5-4480-B0E4-C65ACE5588F3}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -323,16 +323,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Child_Extract_1.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Employees_Extract.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{6E2855F1-5E8D-41AC-8E02-0D86AC996ECC}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Child_Extract_1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{472EEB51-6A64-49C2-A2E9-3D7496B9B50C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Employees_Extract</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">34</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">36</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{BAA6E089-B934-4B66-9411-8B28ABB31999}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E9AA63C9-28E1-46A8-BD45-E8CF272681D1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -340,16 +340,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Child_Extract_2.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Orders_Extract.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{309B071C-CB14-4578-9A42-0A593583264F}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Child_Extract_2</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{B42ECE42-4D6C-40C8-8C8C-FB3A88FCFC9D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Orders_Extract</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionBuild">35</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{AE0D509E-C4E0-4793-901E-8B7E91E1F8D1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{96676E14-197E-40DE-A898-5F52F9C9F82D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

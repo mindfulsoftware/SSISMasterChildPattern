@@ -6,12 +6,12 @@
   DTS:CreatorComputerName="PDNPBRLB97"
   DTS:CreationDate="8/20/2013 4:38:45 PM"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{BAA6E089-B934-4B66-9411-8B28ABB31999}"
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{E9AA63C9-28E1-46A8-BD45-E8CF272681D1}"
   DTS:LastModifiedProductVersion="11.0.2100.60"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Child_Extract_1"
-  DTS:DTSID="{6E2855F1-5E8D-41AC-8E02-0D86AC996ECC}"
+  DTS:ObjectName="Employees_Extract"
+  DTS:DTSID="{472EEB51-6A64-49C2-A2E9-3D7496B9B50C}"
   DTS:CreationName="SSIS.Package.3">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
@@ -20,7 +20,7 @@
       DTS:Namespace="User"
       DTS:IncludeInDebugDump="2345"
       DTS:ObjectName="ExtractedOn"
-      DTS:DTSID="{86F506FC-53F3-449F-B541-C9B120B1E40E}"
+      DTS:DTSID="{354C8B21-8F1B-45A2-BD8E-66D27999B32E}"
       DTS:CreationName="">
       <DTS:VariableValue
         DTS:DataType="7">8/21/2013 3:27:10 PM</DTS:VariableValue>
@@ -29,7 +29,7 @@
       DTS:Namespace="User"
       DTS:IncludeInDebugDump="6789"
       DTS:ObjectName="PackageId"
-      DTS:DTSID="{4DBCA711-A02C-4438-8E0B-C6C9691DA159}"
+      DTS:DTSID="{68CA8CE6-0AF2-4E79-88AA-9C1652D0E624}"
       DTS:CreationName="">
       <DTS:VariableValue
         DTS:DataType="3">0</DTS:VariableValue>
@@ -38,7 +38,7 @@
       DTS:Namespace="User"
       DTS:IncludeInDebugDump="6789"
       DTS:ObjectName="PackageVariables"
-      DTS:DTSID="{DA52F173-3B13-4DD8-87E7-E5CEA9361FA1}"
+      DTS:DTSID="{EFDBD3A4-25B6-43FB-8761-D82D33BDE559}"
       DTS:CreationName="">
       <DTS:VariableValue
         DTS:DataSubType="ManagedSerializable"
@@ -56,7 +56,7 @@
       DTS:Namespace="User"
       DTS:IncludeInDebugDump="6789"
       DTS:ObjectName="RowCount"
-      DTS:DTSID="{1007CC34-74C9-4EE8-A181-643CCF344ACE}"
+      DTS:DTSID="{173DF8C1-EE1B-435D-BC1F-495BA8ED3541}"
       DTS:CreationName="">
       <DTS:VariableValue
         DTS:DataType="3">0</DTS:VariableValue>
@@ -68,7 +68,7 @@
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
       DTS:ObjectName="Child Extract Package Pattern"
-      DTS:DTSID="{DC1FB0C7-C199-490F-8E0B-BEAB79156105}"
+      DTS:DTSID="{AF9B56F6-AE63-465B-92D4-7EE0A0197B03}"
       DTS:CreationName="STOCK:SEQUENCE">
       <DTS:Variables />
       <DTS:Executables>
@@ -78,7 +78,7 @@
           DTS:ThreadHint="0"
           DTS:LocaleID="-1"
           DTS:ObjectName="Assign Package Variables"
-          DTS:DTSID="{2550BF66-EBAF-4148-BB8E-0A7850214141}"
+          DTS:DTSID="{F93912C8-A5C4-4D31-A754-071A5056F5D6}"
           DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -714,7 +714,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:LocaleID="-1"
           DTS:ObjectName="Load package specific variables"
-          DTS:DTSID="{1D5373FE-E019-48A6-9998-9E7D9B8A783C}"
+          DTS:DTSID="{047503A4-B0B2-4288-B13E-3AEC998ABE25}"
           DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -740,7 +740,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:LocaleID="-1"
           DTS:ObjectName="Load table"
-          DTS:DTSID="{B6BAE90A-E6C5-49B2-B41D-0CA4650B4AD5}"
+          DTS:DTSID="{9F456776-D207-4549-9D01-E7C0647BE3FC}"
           DTS:Description="Data Flow Task"
           DTS:CreationName="SSIS.Pipeline.3">
           <DTS:Variables />
@@ -1343,7 +1343,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate data from staging"
-          DTS:DTSID="{D7E637F8-8776-41C4-A375-9737E2CFD0A9}"
+          DTS:DTSID="{26D24EFF-7176-401B-BAB7-5D8E4952E1B9}"
           DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -1358,7 +1358,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:ThreadHint="0"
           DTS:LocaleID="-1"
           DTS:ObjectName="Update parent variables"
-          DTS:DTSID="{7E8D0459-6D85-4243-8799-71806B82FAD6}"
+          DTS:DTSID="{DA59B5A7-872A-42D8-B2DA-65FB7DF9FE1A}"
           DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -1573,14 +1573,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
   </resheader>
 </root>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_869d3187bd54409fbaa2717b34ca5c14.Properties.Settings.get_Default():ST_869d3187bd54409fbaa2717b34ca5c14.Properties.Sett" +
+    "ings")]
+
+namespace ST_869d3187bd54409fbaa2717b34ca5c14.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -1716,35 +1736,6 @@ namespace ST_869d3187bd54409fbaa2717b34ca5c14
 	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_869d3187bd54409fbaa2717b34ca5c14.Properties.Settings.get_Default():ST_869d3187bd54409fbaa2717b34ca5c14.Properties.Sett" +
-    "ings")]
-
-namespace ST_869d3187bd54409fbaa2717b34ca5c14.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -1774,6 +1765,15 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1971,7 +1971,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:To="Package\Child Extract Package Pattern\Assign Package Variables"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
-          DTS:DTSID="{616F2F1F-753E-44D4-9C84-0C7A1F77371C}"
+          DTS:DTSID="{DE21B38E-A45C-42A6-B205-E729AD11AB58}"
           DTS:CreationName="" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Child Extract Package Pattern.PrecedenceConstraints[Constraint 1]"
@@ -1979,7 +1979,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:To="Package\Child Extract Package Pattern\Truncate data from staging"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
-          DTS:DTSID="{89D3DAD7-12B2-4CDD-886D-E6CCBE81598D}"
+          DTS:DTSID="{E4CD9674-E095-40ED-AD3F-3A15BCB19F95}"
           DTS:CreationName="" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Child Extract Package Pattern.PrecedenceConstraints[Constraint 2]"
@@ -1987,7 +1987,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:To="Package\Child Extract Package Pattern\Load table"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 2"
-          DTS:DTSID="{8BCFE97B-0CD7-46D9-BB61-9E7268B0471C}"
+          DTS:DTSID="{8CFEA438-DCA7-4DA7-B8BC-08036BAB7EA1}"
           DTS:CreationName="" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Child Extract Package Pattern.PrecedenceConstraints[Constraint 3]"
@@ -1995,7 +1995,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:To="Package\Child Extract Package Pattern\Update parent variables"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 3"
-          DTS:DTSID="{DD1D2E1B-6991-4331-8561-6DF831DC574B}"
+          DTS:DTSID="{8FF0BA85-1125-4B3C-AFB4-55508CBF1F57}"
           DTS:CreationName="" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
@@ -2028,6 +2028,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Size="250,42"
           Id="Package\Child Extract Package Pattern\Truncate data from staging"
           TopLeft="112,169" />
+        <NodeLayout
+          Size="248,42"
+          Id="Package\Child Extract Package Pattern\Update parent variables"
+          TopLeft="110,316" />
         <EdgeLayout
           Id="Package\Child Extract Package Pattern.PrecedenceConstraints[Constraint]"
           TopLeft="236.5,69">
@@ -2094,10 +2098,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="248,42"
-          Id="Package\Child Extract Package Pattern\Update parent variables"
-          TopLeft="110,316" />
         <EdgeLayout
           Id="Package\Child Extract Package Pattern.PrecedenceConstraints[Constraint 3]"
           TopLeft="235.5,284">
@@ -2134,7 +2134,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package\Child Extract Package Pattern\Load table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="165,42"
           Id="Package\Child Extract Package Pattern\Load table\Load source data"
@@ -2170,7 +2170,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2192,7 +2194,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2214,7 +2218,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
