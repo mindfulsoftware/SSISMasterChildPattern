@@ -106,10 +106,10 @@
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="DestinationServer">
+    SSIS:Name="System">
     <SSIS:Properties>
       <SSIS:Property
-        SSIS:Name="ID">{11cff3f8-2999-4c25-b298-83a1f39b3d3e}</SSIS:Property>
+        SSIS:Name="ID">{fabdec05-d7a8-4812-998e-c1b6570382ce}</SSIS:Property>
       <SSIS:Property
         SSIS:Name="CreationName"></SSIS:Property>
       <SSIS:Property
@@ -121,16 +121,16 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">.\SQL2012</SSIS:Property>
+        SSIS:Name="Value">Northwind</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="DestinationInitialCataog">
+    SSIS:Name="StagingInitialCatalog">
     <SSIS:Properties>
       <SSIS:Property
-        SSIS:Name="ID">{28d42406-a592-4a66-babf-28d80f1eb3dd}</SSIS:Property>
+        SSIS:Name="ID">{44875563-747e-4a84-9435-9260d825d6c4}</SSIS:Property>
       <SSIS:Property
         SSIS:Name="CreationName"></SSIS:Property>
       <SSIS:Property
@@ -148,10 +148,10 @@
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="System">
+    SSIS:Name="StagingServer">
     <SSIS:Properties>
       <SSIS:Property
-        SSIS:Name="ID">{fabdec05-d7a8-4812-998e-c1b6570382ce}</SSIS:Property>
+        SSIS:Name="ID">{b768a82e-cd5f-4c20-977b-78c02367c9e3}</SSIS:Property>
       <SSIS:Property
         SSIS:Name="CreationName"></SSIS:Property>
       <SSIS:Property
@@ -163,7 +163,49 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Northwind</SSIS:Property>
+        SSIS:Name="Value">.\SQL2012</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="WarehouseInitialCatalog">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{604d2611-bf0e-420c-a8cf-92c55e093f34}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">1</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">DW_Northwind</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="WarehouseServer">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{cd93ced3-4a33-4deb-8661-b45b23ee91d4}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">1</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">.\SQL2012</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>

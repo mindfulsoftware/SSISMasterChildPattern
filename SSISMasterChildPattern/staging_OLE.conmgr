@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
-  DTS:ObjectName="Destination_OLE"
-  DTS:DTSID="{9D833DCF-AB9E-4171-A371-2D63CA9C98D4}"
+  DTS:ObjectName="staging_OLE"
+  DTS:DTSID="{8A32B588-78CC-455E-99B6-B7F152250D42}"
   DTS:CreationName="OLEDB">
   <DTS:PropertyExpression
-    DTS:Name="InitialCatalog">@[$Project::DestinationInitialCataog]</DTS:PropertyExpression>
+    DTS:Name="InitialCatalog">@[$Project::StagingInitialCatalog]</DTS:PropertyExpression>
   <DTS:PropertyExpression
-    DTS:Name="ServerName">@[$Project::DestinationServer]</DTS:PropertyExpression>
+    DTS:Name="ServerName">@[$Project::StagingServer]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectionString="Data Source=.\SQL2012;Initial Catalog=stage_Northwind;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />

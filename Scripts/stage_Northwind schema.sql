@@ -31,3 +31,29 @@ create table dbo.stage_Orders (
 	ShipPostalCode nvarchar(10),
 	ShipCountry nvarchar(15)
 )
+go
+create view dbo.vw_Dim_Employee
+as
+	select	EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, HireDate, 
+			HashCode = cast(hashbytes('MD5',
+				coalesce(cast(EmployeeID as nvarchar), '') + 
+				coalesce(cast(LastName as nvarchar), '') + 
+				coalesce(cast(FirstName as nvarchar), '') + 
+				coalesce(cast(Title as nvarchar), '') + 
+				coalesce(cast(TitleOfCourtesy as nvarchar), '') + 
+				coalesce(cast(HireDate as nvarchar), '')
+				) as varbinary(16))
+	from (
+		select
+			EmployeeID, 
+			LastName = coalesce(LastName, ''), 
+			FirstName = coalesce(FirstName, ''), 
+			Title = coalesce(Title, ''), 
+			TitleOfCourtesy = coalesce(TitleOfCourtesy, ''), 
+			HireDate
+		from	
+			dbo.stage_Employees
+	) t
+
+
+go 
