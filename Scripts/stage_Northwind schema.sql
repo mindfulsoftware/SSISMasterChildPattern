@@ -32,8 +32,30 @@ create table dbo.stage_Orders (
 	ShipCountry nvarchar(15)
 )
 go
+create table dbo.stage_OrderDetails (
+	SourceServer varchar(20),
+	SourceInitialCatalog  varchar(20),
+	ExtractedOn datetime,
+	OrderID int,
+	ProductID int,
+	UnitPrice money,
+	Quantity int,
+	Discount real
+)
+go
+create table dbo.stage_Products (
+	SourceServer varchar(20),
+	SourceInitialCatalog  varchar(20),
+	ExtractedOn datetime,
+	ProductID int,
+	ProductName nvarchar(40),
+	QuantityPerUnit nvarchar(20),
+	Discontinued bit
+)
+go
 create view dbo.vw_Dim_Employee
 as
+
 	select	EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, HireDate, 
 			HashCode = cast(hashbytes('MD5',
 				coalesce(cast(EmployeeID as nvarchar), '') + 
@@ -55,5 +77,69 @@ as
 			dbo.stage_Employees
 	) t
 
+go
+create view dbo.vw_Dim_Product
+as
+	select	ProductID, ProductName, QuantityPerUnit, Discontinued,
+			HashCode = cast(hashbytes('MD5',
+				coalesce(cast(ProductID as nvarchar), '') + 
+				coalesce(cast(ProductName as nvarchar), '') + 
+				coalesce(cast(QuantityPerUnit as nvarchar), '') + 
+				coalesce(cast(Discontinued as nvarchar), '')
+				) as varbinary(16))
+	from (
+		select
+			ProductID, 
+			ProductName = coalesce(ProductName, ''), 
+			QuantityPerUnit = coalesce(QuantityPerUnit, ''), 
+			Discontinued = coalesce(Discontinued, '')
 
-go 
+		from	
+			dbo.stage_Products 
+	) t
+go
+create view dbo.vw_Fact_Orders
+as
+	select	OrderId, ProductKey, EmployeeKey, OrderDateKey, RequiredDateKey, ShippedDateKey, 
+			UnitPrice, Quantity, Discount,
+			HashCode = cast(hashbytes('MD5',
+				coalesce(cast(OrderId as nvarchar), '') + 
+				coalesce(cast(ProductKey as nvarchar), '') + 
+				coalesce(cast(EmployeeKey as nvarchar), '') + 
+				coalesce(cast(OrderDateKey as nvarchar), '') + 
+				coalesce(cast(RequiredDateKey as nvarchar), '') + 
+				coalesce(cast(ShippedDateKey as nvarchar), '') + 
+				coalesce(cast(UnitPrice as nvarchar), '') + 
+				coalesce(cast(Quantity as nvarchar), '') + 
+				coalesce(cast(Discount as nvarchar), '')
+				) as varbinary(16))
+	from (
+		select
+			o.OrderId, 
+			ProductKey = p.ProductKey,
+			--CustomerKey = ,
+			EmployeeKey = e.EmployeeKey, 
+			OrderDateKey = do.DateKey,
+			RequiredDateKey = dr.DateKey,
+			ShippedDateKey = ds.DateKey,
+			UnitPrice = od.UnitPrice,
+			Quantity = od.Quantity,
+			Discount = od.Discount
+		from	
+			dbo.stage_Orders o
+		join	
+			dbo.Stage_OrderDetails od on o.OrderId = od.OrderId
+		join
+			DW_Northwind.dbo.vw_Dim_Employee e on o.EmployeeID = e.EmployeeId
+		join
+			DW_Northwind.dbo.Dim_Product p on od.ProductID = p.ProductId
+		join
+			DW_Northwind.dbo.Dim_Date do on cast(convert(varchar(8), o.OrderDate, 112) as int) = do.DateKey
+		join
+			DW_Northwind.dbo.Dim_Date dr on cast(convert(varchar(8), o.RequiredDate, 112) as int) = dr.DateKey
+		join
+			DW_Northwind.dbo.Dim_Date ds on cast(convert(varchar(8), o.ShippedDate, 112) as int) = ds.DateKey
+) t
+
+
+go
