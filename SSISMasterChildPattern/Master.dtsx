@@ -6,8 +6,8 @@
   DTS:CreatorComputerName="PDNPBRLB97"
   DTS:CreationDate="8/21/2013 9:46:55 AM"
   DTS:PackageType="5"
-  DTS:VersionBuild="52"
-  DTS:VersionGUID="{F7971908-EFAF-4968-A2D2-959050F9F0E8}"
+  DTS:VersionBuild="54"
+  DTS:VersionGUID="{7B5C42A1-3ADE-4F95-891F-A5E2713CEC8F}"
   DTS:SuppressConfigurationWarnings="True"
   DTS:LastModifiedProductVersion="11.0.2100.60"
   DTS:LocaleID="1033"
@@ -66,7 +66,7 @@
     <DTS:Variable
       DTS:Namespace="User"
       DTS:IncludeInDebugDump="6789"
-      DTS:ObjectName="RowsDeleted_Master"
+      DTS:ObjectName="RowsDeleted"
       DTS:DTSID="{42EBB372-9384-400B-A725-F24ADA694775}"
       DTS:CreationName="">
       <DTS:VariableValue
@@ -430,14 +430,35 @@
   </resheader>
 </root>]]></ProjectItem>
                       <ProjectItem
-                        Name="Properties\Settings.settings"
-                        Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                        Name="Properties\AssemblyInfo.cs"
+                        Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_3bee58d2d61742c5b2ace18cf5744031")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_3bee58d2d61742c5b2ace18cf5744031")]
+[assembly: AssemblyCopyright("Copyright @  2013")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
                       <ProjectItem
                         Name="ScriptMain.cs"
                         Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -609,35 +630,14 @@ namespace ST_3bee58d2d61742c5b2ace18cf5744031.Properties {
     }
 }]]></ProjectItem>
                       <ProjectItem
-                        Name="Properties\AssemblyInfo.cs"
-                        Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_3bee58d2d61742c5b2ace18cf5744031")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_3bee58d2d61742c5b2ace18cf5744031")]
-[assembly: AssemblyCopyright("Copyright @  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                        Name="Properties\Settings.settings"
+                        Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
                       <ProjectItem
                         Name="Properties\Resources.Designer.cs"
                         Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -838,19 +838,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Iterate Packages\Reset row counters"
+          DTS:refId="Package\Iterate Packages\Reset iteration variables"
           DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
           DTS:ThreadHint="0"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Reset row counters"
+          DTS:ObjectName="Reset iteration variables"
           DTS:DTSID="{6740B7FC-21BF-47EF-8836-85212D93FAD9}"
           DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{92EC2888-4552-464F-AA09-05F4C8AAA68A}"
-              SQLTask:SqlStatementSource="select&#xA;  RowsRead = 0,&#xA;  RowsInserted = 0,&#xA;  RowsUpdated = 0,&#xA;  RowsDeleted = 0,&#xA;  RowsUnchanged = 0"
+              SQLTask:SqlStatementSource="select&#xA;  RowsRead = 0,&#xA;  RowsInserted = 0,&#xA;  RowsUpdated = 0,&#xA;  RowsDeleted = 0,&#xA;  RowsUnchanged = 0,&#xA;  Message = ''"
               SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ResultBinding
                 SQLTask:ResultName="RowsRead"
@@ -866,7 +866,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                 SQLTask:DtsVariableName="User::RowsDeleted_Master" />
               <SQLTask:ResultBinding
                 SQLTask:ResultName="RowsUnchanged"
-                SQLTask:DtsVariableName="User::RowsUnchanged_Master" />
+                SQLTask:DtsVariableName="User::RowsUnchanged" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="Message"
+                SQLTask:DtsVariableName="User::Message" />
             </SQLTask:SqlTaskData>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -1035,14 +1038,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Iterate Packages.PrecedenceConstraints[Constraint]"
           DTS:From="Package\Iterate Packages\Update log status for given package"
-          DTS:To="Package\Iterate Packages\Reset row counters"
+          DTS:To="Package\Iterate Packages\Reset iteration variables"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
           DTS:DTSID="{092382B2-EFB2-49BA-A39D-9C26A27FA3A0}"
           DTS:CreationName="" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Iterate Packages.PrecedenceConstraints[Constraint 1]"
-          DTS:From="Package\Iterate Packages\Reset row counters"
+          DTS:From="Package\Iterate Packages\Reset iteration variables"
           DTS:To="Package\Iterate Packages\Execute Package"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
@@ -1120,7 +1123,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           TopLeft="139,169" />
         <NodeLayout
           Size="246,42"
-          Id="Package\Iterate Packages\Reset row counters"
+          Id="Package\Iterate Packages\Reset iteration variables"
           TopLeft="136,101" />
         <NodeLayout
           Size="181,42"

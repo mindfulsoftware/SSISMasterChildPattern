@@ -162,3 +162,6 @@ values('Demo', 'Northwind', 'Staging', 'Orders_Extract.dtsx', 2, 1)
 
 insert dbo.Package ([Application], [System], Destination, Package, LoadOrder, LoadEnabled)
 values('Demo', 'Northwind', 'DW', 'Dim_Employees_Load.dtsx', 1, 1)
+
+insert dbo.PackageVariable(PackageId, Name, Value, [Description])
+values (1, 'Country', 'USA', 'Extract USA Employees only')
