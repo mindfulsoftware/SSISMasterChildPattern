@@ -153,15 +153,29 @@ as
 
 	end
 go
---populate
+-- extract packages
 insert dbo.Package ([Application], [System], Destination, Package, LoadOrder, LoadEnabled)
 values('Demo', 'Northwind', 'Staging', 'Employees_Extract.dtsx', 1, 1)
 
 insert dbo.Package ([Application], [System], Destination, Package, LoadOrder, LoadEnabled)
-values('Demo', 'Northwind', 'Staging', 'Orders_Extract.dtsx', 2, 1)
+values('Demo', 'Northwind', 'Staging', 'Products_Extract.dtsx', 3, 1)
 
+insert dbo.Package ([Application], [System], Destination, Package, LoadOrder, LoadEnabled)
+values('Demo', 'Northwind', 'Staging', 'Orders_Extract.dtsx', 3, 1)
+
+insert dbo.Package ([Application], [System], Destination, Package, LoadOrder, LoadEnabled)
+values('Demo', 'Northwind', 'Staging', 'OrderDetails_Extract.dtsx', 4, 1)
+
+-- load pacakges
 insert dbo.Package ([Application], [System], Destination, Package, LoadOrder, LoadEnabled)
 values('Demo', 'Northwind', 'DW', 'Dim_Employees_Load.dtsx', 1, 1)
 
+insert dbo.Package ([Application], [System], Destination, Package, LoadOrder, LoadEnabled)
+values('Demo', 'Northwind', 'DW', 'Dim_Products_Load.dtsx', 2, 1)
+
+insert dbo.Package ([Application], [System], Destination, Package, LoadOrder, LoadEnabled)
+values('Demo', 'Northwind', 'DW', 'Fact_Orders_Load_1.dtsx', 3, 1)
+
+-- package variables
 insert dbo.PackageVariable(PackageId, Name, Value, [Description])
 values (1, 'Country', 'USA', 'Extract USA Employees only')
